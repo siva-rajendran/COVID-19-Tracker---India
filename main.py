@@ -31,6 +31,9 @@ def statedata(name):
 
             rawdatatext.delete('1.0', END)
             rawdatatext.insert(INSERT, json.dumps(state, indent=1))
+
+def statedatathread(statevalue):
+    threading.Thread(target=statedata, args=(statevalue,)).start()
     
 root = Tk()
 root.geometry('720x480')
@@ -71,7 +74,7 @@ statechooser['values'] = ('Andaman and Nicobar Islands', 'Andhra Pradesh','Aruna
 statechooser.current(0)
 statechooser.place(x=20, y=190)
 
-statebtn = Button(root, text="FETCH DATA", command=lambda:statedata(statename.get()))
+statebtn = Button(root, text="FETCH DATA", command=lambda:statedatathread(statename.get()))
 statebtn.place(x=290,y=188)
 
 statenamelabel = Label(root, text="State Name   : ",font=("Calibri",12)).place(x=20, y=240)
