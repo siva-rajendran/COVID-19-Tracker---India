@@ -1,7 +1,8 @@
 # COVID-19 Tracker - India
-In this project the COVID-19 cases in india can be tracked easily.
+A GUI based COVID-19 tracker built using python and tkinter GUI library. This program displays the COVID-19 cases across india and specific cases according to the state choosen.
 ![Screenshot of COVID-19 Tracker](https://github.com/siva222r/COVID-19-Tracker---India/blob/master/Screenshot%20COVID-19%20Tracker.png?raw=true)
-#### Libraries to be Used
+
+#### Libraries Used
 - tkinter (for GUI)
 - requests
 - json
